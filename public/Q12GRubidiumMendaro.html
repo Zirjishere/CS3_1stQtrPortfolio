@@ -6,6 +6,7 @@
 <body>
     <h1>Meal Cost Calculator</h1>
     <h2>Q1 2rd Graded Exercise submitted by Mendaro, Zirjan Hero F. of  9 - Rubidium</h2>
+
     <form>
         <label for = "mealPrice" > Meal Price: </label>
         <input type = "text" id= "mealPrice" name = "mealPrice"><br>
@@ -18,7 +19,9 @@
 
         <input type = "button" value = "Calculate" onclick ="totalMeal()"><br>
     </form>
-    <div id="result"></div>
+
+    <div id="result"></div><br>
+
     <script>
         function totalMeal() {
               var mealPrice = parseFloat(document.getElementById("mealPrice").value);
