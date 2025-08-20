@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Cost Calculator</title>
+    <h1>Meal Cost Calculator</h1>
+    <h2>Q1 2rd Graded Exercise submitted by Mendaro, Zirjan Hero F. of  9 - Rubidium</h2>
+    <form>
+        <label for = "mealPrice" > Meal Price: </label>
+        <input type = "text" id= "mealPrice" name = "mealPrice"><br>
+        
+        <label for = "tip" > Tip: </label>
+        <input type = "text" id = "tip" name = "tip"><br>
+        
+        <label for = "serviceCharge" >Service Charge (%): </label>
+        <input type ="text" id = "serviceCharge" name = "serviceCharge"><br>
+
+        <input type = "button" value = "Calculate" onclick ="totalMeal()"><br>
+<body>
+    <script>
+        function totalMeal() {
+              var mealPrice = parseFloat(document.getElementById("mealPrice").value);
+                var tip = parseFloat(document.getElementById("tip").value);
+                var serviceCharge = parseFloat(document.getElementById("serviceCharge").value);
+                var totalCost = mealPrice + tip + (serviceCharge / 100 * mealPrice);
+                document.getElementById("result").innerText = "Total Meal: " + totalCost.toFixed(2);
+        }
+    </script>
+
+</body>
+<footer> 
+W3Schools.com. (n.d.). https://www.w3schools.com/tags/att_input_type_button.asp
+</footer>
+</html>
