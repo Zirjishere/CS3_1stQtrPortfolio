@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: cursive, system-ui, sans-serif;
+  color: saddlebrown;
+  background-color: peachpuff;
+}
+
+.center-text {
+  text-align: center;
+}
