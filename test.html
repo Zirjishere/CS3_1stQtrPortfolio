@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tinola Recipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Tinola Recipe</h1>
+<div id="ingredients">
+    <h2>Ingredients</h2>
+</div>
+
+
+<script>
+    tinola = ["<li>chicken</li>", "ginger", "onion", "pepper", "fish sauce", "water", "pepper", "fish Ssuce"];
+    for(let i = 0; i < tinola.length; i++){
+        document.getElementById("ingedients").innerHTML += "<li>" += tinola[i];
+    }
+</script>
+</body>
+</html>
