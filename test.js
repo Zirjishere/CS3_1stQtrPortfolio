@@ -1,5 +1,1 @@
-greet = function (name) {
-    console.log("Hello, " + name + "!");
-};
-
-greet("World");
+setTimeout(greet, 5000, "World");
