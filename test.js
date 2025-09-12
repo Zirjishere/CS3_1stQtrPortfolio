@@ -1,6 +1,5 @@
-function square(x) {
-    return x * x;
-}
+greet = function (name) {
+    return "Hello, " + name + "!";
+};
 
-square(10);
-console.log("Square of 5 is:", square(5));
+console.log(greet("World"));
