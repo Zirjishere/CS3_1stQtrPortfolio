@@ -1,1 +1,3 @@
-setTimeout(greet, 5000, "World");
+setTimeout(function() {
+  console.log("Time's up!");
+}, 1000);
