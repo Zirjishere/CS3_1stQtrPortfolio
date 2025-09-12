@@ -1,3 +1,3 @@
 setTimeout(function() {
-  console.log("Time's up!");
-}, 1000);
+  console.log("Hi");
+}, 5000);
