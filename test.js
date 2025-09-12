@@ -1,5 +1,6 @@
-function square(number) {
-    return number * number;
+function square(x) {
+    return x * x;
 }
 
-square(5);
+square(10);
+console.log("Square of 5 is:", square(5));
