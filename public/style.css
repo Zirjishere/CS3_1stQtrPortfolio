@@ -48,7 +48,8 @@ h2 {
     width: 50%;
 }
 
-    .button {
-      display: block;
-      margin: 0 auto;
-    }
+.container {
+  display: grid;
+  place-items: top; 
+  height: 100vh;
+}
