@@ -57,3 +57,7 @@ button {
   display: block;      
   margin: 10px auto;    
 }
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
