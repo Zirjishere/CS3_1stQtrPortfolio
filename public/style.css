@@ -5,7 +5,7 @@ body {
   background-color: peachpuff;
 }
 
-h1, h2, h5, p {
+h1, h2, h5, p, .container{
       text-align: center;
     }
 h1 {
@@ -48,8 +48,12 @@ h2 {
     width: 50%;
 }
 
-.container {
-  display: grid;
-  place-items: top; 
-  height: 100vh;
+
+#guessInput {
+  display: block;      
+  margin: 20px auto;    
+}
+button {
+  display: block;      
+  margin: 10px auto;    
 }
