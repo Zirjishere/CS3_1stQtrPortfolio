@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>✨Guess My Word✨</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp9735904.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+        }
+        .center-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100vw;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #1e76e9;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #1e76e9;
+            font-size: 1.5em;
+            margin-bottom: 0px;
+        }
+        h3 {
+            color: #1e76e9;
+            font-size: 1em;
+            margin-bottom: 0px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #1e76e9;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #1e76e9;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1b83d8;
+        }
+        #message {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .reflection-section {
+            max-width: 400px;
+            background: rgba(255,255,255,0.92);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(30,118,233,0.08);
+            padding: 16px 18px;
+            text-align: left;
+            font-size: 1.1em;
+            color: #1e76e9;
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 100;
+        }
+        .reflection-section h2 {
+            color: #1e76e9;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-wrapper">
+        <div class="container">
+            <h1>Guess My Word!</h1>
+            <h2>Hint:</h2>
+            <h3> What's the game displayed at the background? The first word only</h3>
+            <p id="wordDisplay">_ _ _ _ _ _ _</p>
+            <input type="text" id="guessInput" maxlength="1" placeholder="Enter a letter">
+            <button onclick="makeGuess()">Guess</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <section class="reflection-section">
+        <h2>Reflection:</h2>
+        <p>
+            One thing I learned about loops this quarter is that they can be used to iterate over arrays and perform actions on each element. 
+            It is super useful for tasks and it can make your code more efficient and easier to read.
+            Arrays makes my code mroe powerful because they allow me to store multiple values in a single variable and access them using an index like what happened with the secret word array.
+            It also helped the user keep tracked of it's progress guessing the word.
+            If I had more time, I would add a feature to limit the number of incorrect guesses a player can make before losing the game and
+            also add a redo button where it will be a different word to guess.
+        </p>
+    </section>
+
+    <script>
+        const secretWord = ["g", "e", "n", "s", "h", "i", "n"];
+        let guessedWord = ["_", "_", "_", "_", "_", "_", "_"];
+
+        document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+
+        function makeGuess() {
+            const guessInput = document.getElementById("guessInput");
+            const guess = guessInput.value.toLowerCase(); 
+            let correct = false;
+
+            for (let i = 0; i < secretWord.length; i++) {
+                if (secretWord[i] === guess) {
+                    guessedWord[i] = guess; 
+                    correct = true;
+                }
+            }
+
+            document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+
+            if (correct) {
+                document.getElementById("message").textContent = "✅ Correct guess!";
+            } else {
+                document.getElementById("message").textContent = "❌ Incorrect guess. Try again!";
+            }
+
+            guessInput.value = "";
+
+            if (!guessedWord.includes("_")) {
+                document.getElementById("message").textContent = "🎉 Congratulations! You guessed the word!";
+            }
+        }
+    </script>
+</body>
+</html>
