@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +12,15 @@
 <input type="text" id="guessInput" maxlength="1">
 <button onclick="makeGuess()">Guess</button>
 <p id="message"></p>
+<p id="attemptsDisplay"></p>
 
 <script>
   let secretWord = ["h", "u", "n", "g", "r", "y", "h", "e", "r", "o"];
   let guessedWord = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"];
+  let attempts = 7;
 
   document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+  document.getElementById("attemptsDisplay").textContent = "Attempts left: " + attempts;
 
   function makeGuess() {
     let guess = document.getElementById("guessInput").value.toLowerCase();
@@ -29,12 +33,21 @@
       }
     }
 
+    if (!correct) {
+      attempts--;
+    }
+
     document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
     document.getElementById("message").textContent = correct ? "✅ Correct!" : "❌ Try again.";
+    document.getElementById("attemptsDisplay").textContent = "Attempts left: " + attempts;
+
     document.getElementById("guessInput").value = "";
+
+    if (attempts <= 0) {
+      document.getElementById("message").textContent = "💀 Game Over! The word was '" + secretWord.join("") + "'";
+      document.getElementById("guessInput").disabled = true;
+    }
   }
 </script>
-
-
 </body>
 </html>
