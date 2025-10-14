@@ -1,151 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>✨Guess My Word✨</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubidium Friday Schedule_Zirjan Hero F. Mendaro</title>
+    
+</head>
     <style>
+        table {
+            width: 35%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: peachpuff;
+        }
+        td {
+            background-color: lightyellow;
+        }
         body {
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('https://wallpapercave.com/wp/wp9735904.jpg');
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-        }
-        .center-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            width: 100vw;
-        }
-        .container {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9); 
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 0;
+        font-family: Tahoma, system-ui, sans-serif;
+        color: saddlebrown;
+        background-color: #CAF0F8;
         }
         h1 {
-            color: #1e76e9;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        text-align: center;
         }
-        h2 {
-            color: #1e76e9;
-            font-size: 1.5em;
-            margin-bottom: 0px;
+        .center-table {
+        margin-left: auto;
+        margin-right: auto;
         }
-        h3 {
-            color: #1e76e9;
-            font-size: 1em;
-            margin-bottom: 0px;
-        }
-        p {
-            font-size: 1.2em;
-            color: #333;
-        }
-        input {
-            padding: 10px;
-            font-size: 1em;
-            border: 2px solid #1e76e9;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #1e76e9;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #1b83d8;
-        }
-        #message {
-            margin-top: 15px;
-            font-size: 1.2em;
-            color: #333;
-        }
-        .reflection-section {
-            max-width: 400px;
-            background: rgba(255,255,255,0.92);
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(30,118,233,0.08);
-            padding: 16px 18px;
-            text-align: left;
-            font-size: 1.1em;
-            color: #1e76e9;
-            position: fixed;
-            bottom: 24px;
-            left: 24px;
-            z-index: 100;
-        }
-        .reflection-section h2 {
-            color: #1e76e9;
-            margin-top: 0;
+        th {
+        text-align: center;
         }
     </style>
-</head>
 <body>
-    <div class="center-wrapper">
-        <div class="container">
-            <h1>Guess My Word!</h1>
-            <h2>Hint:</h2>
-            <h3> What's the game displayed at the background? The first word only</h3>
-            <p id="wordDisplay">_ _ _ _ _ _ _</p>
-            <input type="text" id="guessInput" maxlength="1" placeholder="Enter a letter">
-            <button onclick="makeGuess()">Guess</button>
-            <p id="message"></p>
-        </div>
-    </div>
+        <h1>Table Schedule</h1>
+    <table border = "1" class="center-table">
+        <tr>
+        <th colspan = "2"> Subject Schedule</th>
+        </tr>
+        
+        <tr>
+            <th>Time</th>
+            <th>Friday</th>
+        </tr>
 
-    <section class="reflection-section">
-        <h2>Reflection:</h2>
-        <p>
-            One thing I learned about loops this quarter is that they can be used to iterate over arrays and perform actions on each element. 
-            It is super useful for tasks and it can make your code more efficient and easier to read.
-            Arrays makes my code mroe powerful because they allow me to store multiple values in a single variable and access them using an index like what happened with the secret word array.
-            It also helped the user keep tracked of it's progress guessing the word.
-            If I had more time, I would add a feature to limit the number of incorrect guesses a player can make before losing the game and
-            also add a redo button where it will be a different word to guess.
-        </p>
-    </section>
+        <tr>
+            <td>7:30 - 8:15</td>
+                <td rowspan = "2">English</td>
+            <tr>
+                 <td>8:15 - 9:00</td> 
+            </tr>
 
-    <script>
-        const secretWord = ["g", "e", "n", "s", "h", "i", "n"];
-        let guessedWord = ["_", "_", "_", "_", "_", "_", "_"];
+        </tr>
 
-        document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+        <tr>
+            <td>9:00 - 9:10</td>
+            <td>Break</td>
+        </tr>
 
-        function makeGuess() {
-            const guessInput = document.getElementById("guessInput");
-            const guess = guessInput.value.toLowerCase(); 
-            let correct = false;
+        <tr>
+            <td>9:10 - 9:55</td>
+                <td rowspan = "2">Social Science</td>
+            <tr>
+                 <td>9:55 - 10:40</td>
+            </tr>
+        </tr>
 
-            for (let i = 0; i < secretWord.length; i++) {
-                if (secretWord[i] === guess) {
-                    guessedWord[i] = guess; 
-                    correct = true;
-                }
-            }
+        <tr>
+            <td>10:40 - 11:25</td>
+                <td rowspan = "2">Math</td>
+            <tr>
+                 <td>11:25 - 12:10</td>
+            </tr>
+        </tr>
 
-            document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+        <tr>
+            <td>12:10 - 1:05</td>
+            <td>Lunch</td>
+        </tr>
 
-            if (correct) {
-                document.getElementById("message").textContent = "✅ Correct guess!";
-            } else {
-                document.getElementById("message").textContent = "❌ Incorrect guess. Try again!";
-            }
+        <tr>
+            <td>1:05 - 1:50</td>
+            <td>Physics</td>
+        </tr>
 
-            guessInput.value = "";
+        <tr>
+            <td>1:50 - 2:45</td>
+                <td rowspan = "2">Study Period</td>
+            <tr>
+                 <td>2:45 - 3:30</td>
+            </tr>
+        </tr>
 
-            if (!guessedWord.includes("_")) {
-                document.getElementById("message").textContent = "🎉 Congratulations! You guessed the word!";
-            }
-        }
-    </script>
+        <tr>
+            <td>3:30 - 4:15</td>
+            <td>Computer Science</td>
+        </tr>
+    </table>
 </body>
 </html>
